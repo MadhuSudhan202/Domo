@@ -3,21 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot with Voice</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Madhu Sudhan - Frontend Developer</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .buttons {
+            margin: 20px;
+        }
+        .link {
+            margin-top: 10px;
+        }
+
+     
+        /* animation is start */
+        .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.2s ease-in-out, transform 0.3s ease-in-out, background-color 0.5s linear;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+    </style>
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-box" id="chat-box"></div>
-        <div class="input-group">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
+    <header>
+        <div class="logo">MATRIX-TECHNO-ALFA</div>
+        <button class="toggle-button" onclick="toggleMenu()">☰</button> <!-- Toggle button -->
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero reveal" id="home">
+        <div class="content">
+            <h1 class="disco-text">Hi, I'm Madhu Sudhan</h1>
+            <h2>Frontend Developer</h2>
+            <p>Skilled in creating dynamic and responsive web applications using HTML, CSS, and JavaScript. Proficient in modern frameworks like React.js to deliver user-friendly and efficient interfaces.</p>
+            <div class="buttons">
+                <button id="hireMeBtn">Hire ME</button>
+                <button id="talkBtn">Let's Talk</button>
+            </div>
+            <div class="link hidden" id="resumeLink">
+                <a href="https://mannemmadhusudhan.github.io/web-Project/resume.html" target="_blank">View My Resume</a>
+            </div>
+            <div class="link hidden" id="emailLink">
+                <p><a href="mailto:softwaremadhu1@gmail.com">Send email</a></p>           
+            </div>
+            
+           <div class="social-icons">
+            &nbsp; &nbsp;
+                <a href="https://github.com/MannemMadhuSudhan " target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://mannemmadhusudhan.github.io/web-Project/protfolo/web.html" target="_blank"><i class="fas fa-globe"></i></a> 
+                <a href="https://www.linkedin.com/in/madhu-sudhan-mannem-109a79257/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
-        <div class="voice-controls">
-            <button onclick="startRecognition()">Start Voice Recognition</button>
-            <button onclick="stopRecognition()">Stop Voice Recognition</button>
+        <div class="image">
+            <img src="./img/model2.png" alt="Madhu Sudhan">
         </div>
-    </div>
-    <script src="script.js"></script>
+    </section>
+<br><br>
+    <section class="about-me reveal" id="about">
+        <div class="about-container">
+            <div class="about-image-container">
+                <img src="./img/aboutimg.png" alt=" Photo" width="400">
+            </div>
+            <div class="ab-text-container">
+                <h2>Who Am I?</h2>
+                <h1>About Me</h1>
+                <p>I am Madhu, a skilled Full-Stack Java Developer with expertise in Java, React.js, MongoDB, Bootstrap, HTML, CSS, JavaScript, and more. I have a strong passion for coding and a keen interest in learning new technologies.</p>
+                <button class="button">Learn More</button>
+            </div>
+        </div>
+
+    </section>
+
+<br><br><br>
+    <section class="service reveal" id="services">
+        <h2>What do I?</h2>
+        <h1>My Services</h1>
+        <div class="service-container">
+         
+            <div class="service-card">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Full-Stack Java Developer </h3>
+                <p>Trained in Java, React.js, MongoDB, Bootstrap, HTML, CSS, and JavaScript. Eager to develop dynamic, responsive web applications and create engaging web content.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-desktop service-icon"></i>
+                <h3>Front-End Developer</h3>
+                <p>Skilled in HTML, CSS, JavaScript, and React.js. Proficient in creating visually appealing, user-friendly interfaces and responsive web designs.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-server service-icon"></i>
+                <h3>Back-End Developer</h3>
+                <p>Experienced in Java, MongoDB, and Bootstrap. Capable of designing and implementing scalable, efficient server-side logic and database integration.</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <br><br>
+
+    <section class="portfolio reveal" id="portfolio">
+        <h2>My Projects</h2>
+        <h1>Portfolio</h1>
+        <div class="portfolio-container">
+            <div class="portfolio-card">
+                <img src="./img/image.png" alt="Project 1" class="project-image">
+                <h3>Registration Form</h3>
+                <p>A responsive user registration form built with HTML, CSS, and JavaScript. Features include form validation, input styling, and a clean, accessible design.</p>
+                <div class="hover-overlay">
+                    <a href="https://github.com/MannemMadhuSudhan/bharat-intern-registration-form" class="project-link">View Project on Github</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="./img/img2.png" alt="Project 2" class="project-image">
+                <h3>Money Expense Tracker</h3>
+                <p>A finance tracking application created using React.js and MongoDB. This app allows users to log expenses, categorize spending, and visualize expense trends.</p>
+                <div class="hover-overlay">
+                    <a href="https://github.com/MannemMadhuSudhan/Registation-with-reactjs-mongodb.git" class="project-link">View Project on Github</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="./img/Web.png" alt="Project 3" class="project-image">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website showcasing various projects and skills. Developed with HTML, CSS, and JavaScript, featuring smooth navigation and responsive design.</p>
+                <div class="hover-overlay">
+                    <a href="https://mannemmadhusudhan.github.io/web-Project/protfolo/web.html" class="project-link">View Project Link</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="./img/image-Todo.png" alt="Project 4" class="project-image">
+                <h3>Todo-List</h3>
+                <p>A simple yet functional to-do list application built with HTML, CSS, and JavaScript. It allows users to add, delete, and mark tasks as complete.</p>
+                <div class="hover-overlay">
+                    <a href="https://mannemmadhusudhan.github.io/todolist-assessment/todolist/todo/index.html" class="project-link">View Project Link</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="./img/count.png" alt="Project 5" class="project-image">
+                <h3>Counter-Web</h3>
+                <p>A minimalist counter application designed for quick counting tasks. Built with HTML, CSS, and JavaScript, featuring increment, decrement, and reset functionality.</p>
+                <div class="hover-overlay">
+                    <a href="https://mannemmadhusudhan.github.io/web-Project/counter/index.html" class="project-link">View Project Link</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="./img/Port-folio.png" alt="Project 6" class="project-image">
+                <h3>My Original Portfolio</h3>
+                <p>My main portfolio website, built to display my skills, projects, and resume. It is mobile-responsive and designed to showcase both front-end and back-end capabilities.</p>
+                <div class="hover-overlay">
+                    <a href="https://mannemmadhusudhan.github.io/portfolio-sample/portfolio2/index.html" class="project-link">View Project Link</a>
+                </div>
+
+
+
+
+
+            </div>
+
+
+            
+            <div class="portfolio-card ">
+                <img src="./img/QuizApp-.png" alt="Quiz Application project 7" class="project-image">
+                <h3>Core Java QuizApp</h3>
+                <p>A Core Java-based Quiz Application built to improve learning through interactive quizzes. It includes question management, scoring, and a user-friendly interface.</p>
+                <div class="hover-overlay">
+                    <a href="https://github.com/MannemMadhuSudhan/QuizAppWithCoreJava.git" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <img src="./img/JavaWithHibernate.png" alt="Student Management System project 8" class="project-image">
+                <h3>Student Management System</h3>
+                <p>A CRUD-based application built with Hibernate and MySQL for efficient student data management, including adding, updating, deleting, and viewing records.</p>
+                <div class="hover-overlay">
+                    <a href="https://github.com/MannemMadhuSudhan/StudentManagementApplicationWithHibernate.git" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <img src="./img/register-now-application.jpg" alt="Client Management with Servlet project 9" class="project-image">
+                <h3>Client Login & Registration</h3>
+                <p>A client login and registration system using Servlets with a MySQL database, including secure user authentication and a dynamic home page.</p>
+                <div class="hover-overlay">
+                    <a href="https://github.com/MannemMadhuSudhan/LoginAndRegisterWithSpringBoot.git" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <img src="./img/Hotel Reservation System.png" alt="Hotel Reservation System project 10" class="project-image">
+                <h3>Hotel Reservation System</h3>
+                <p>A Java JDBC-based system for managing hotel reservations, including room bookings, customer records, and invoice generation, integrated with MySQL.</p>
+                <div class="hover-overlay">
+                    <a href="https://github.com/MannemMadhuSudhan/Hotel-Reservation-System-With-Jdbc.git" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <img src="./img/E learning Platform With Firebase.png" alt="Firebase Client Management project 11" class="project-image">
+                <h3>E_learning_platformWithFirebase</h3>
+                <p>A front-end project featuring client login and registration, using Firebase for authentication and database storage. Fully responsive with HTML, CSS, and JavaScript.</p>
+                <div class="hover-overlay">
+                    <a href="https://mannemmadhusudhan.github.io/E_learning_platformWithFirebase/E_learning_platformWithFirebase/rig/index.html" class="project-link">View Project</a>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <img src="./img/fullstack.jpg" alt="Full Stack Application project 12" class="project-image">
+                <h3>Full Stack Application</h3>
+                <p>A client application developed using React.js, Spring Boot, and MySQL. It includes user authentication, dashboard features, and real-time updates.</p>
+                <div class="hover-overlay">
+                    <a href="https://github.com/MannemMadhuSudhan/LoginAndRegisterWithSpringBoot-Reactjs-mysql.git" class="project-link">View Project</a>
+                </div>
+            </div>
+
+
+            
+        </div>
+        
+
+    </section>
+
+    <br><br><br><br><br>  <br><br><br><br><br>   <br><br><br><br><br>   <br><br><br><br><br>
+    <section class="contact-form reveal" id="contact">
+        <div class="contact-container" style="color: white">
+            <div class="contact-info">
+                <h1>Get in Touch</h1>
+                <p>Feel free to get in touch with me for any inquiries or questions.</p>
+            </div>
+        </div>
+    
+        <div class="form-container reveal">
+            <h1>Contact Me</h1>
+            <form id="co-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    
+    <section class="faq reveal">
+        <center>
+            <h2>Frequently Asked Questions</h2>
+            <h1>FAQ</h1>
+        </center>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-question" onclick="toggleAnswer(this)">Question 1: What services do you offer?</h3>
+                <p class="faq-answer">Answer: I offer web development services including front-end and back-end development, and full-stack applications.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question" onclick="toggleAnswer(this)">Question 2: How can I contact you?</h3>
+                <p class="faq-answer">Answer: You can contact me through the contact form on this page or via email at softwaremadhu1@gmail.com.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question" onclick="toggleAnswer(this)">Question 3: What technologies do you use?</h3>
+                <p class="faq-answer">Answer: I use a variety of technologies including HTML, CSS, JavaScript, Java, React.js, and MongoDB.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question" onclick="toggleAnswer(this)">Question 4: Do you offer maintenance services?</h3>
+                <p class="faq-answer">Answer: Yes, I provide ongoing support and maintenance for websites and applications to ensure they run smoothly.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question" onclick="toggleAnswer(this)">Question 5: Can you work on custom projects?</h3>
+                <p class="faq-answer">Answer: Absolutely, I specialize in tailoring solutions to meet the specific needs of each client, ensuring a custom fit for any project.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question" onclick="toggleAnswer(this)">Question 6: What is your development process?</h3>
+                <p class="faq-answer">Answer: My process involves understanding the client's requirements, planning, designing, developing, testing, and delivering the final product with ongoing support.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question" onclick="toggleAnswer(this)">Question 7: How long does it take to complete a project?</h3>
+                <p class="faq-answer">Answer: Project duration varies depending on the complexity, but I always aim to provide realistic timelines and regular updates to the client.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question" onclick="toggleAnswer(this)">Question 8: Do you offer any guarantees?</h3>
+                <p class="faq-answer">Answer: Yes, I ensure quality in all my projects and am committed to providing revisions to meet client satisfaction.</p>
+            </div>
+        </div>
+        
+    </section>
+    
+    <section class="location reveal" id="loc">
+        <center>
+        <h2>Location</h2>
+        <h1>Find Me Here</h1>
+    </center>
+    
+        <div class="map-container">
+            <!-- Replace the src URL with your own Google Maps embed link -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.814932238692!2d-122.08385178460692!3d37.38605177982513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba7e25e59f5b%3A0xf6ef5c4f3b07d6d3!2sSilicon%20Valley%20Bank!5e0!3m2!1sen!2sus!4v1637948749743!5m2!1sen!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    
+
+    <footer style="color: white;">
+        <center>
+        <p>&copy; 2024 Madhu Sudhan. All rights reserved.</p>
+    </center>
+    </footer>
+
+    
+    <script>
+        document.getElementById('hireMeBtn').addEventListener('click', function() {
+            document.getElementById('resumeLink').classList.remove('hidden'); // Show resume
+            document.getElementById('emailLink').classList.add('hidden'); // Hide Gmail section
+        });
+
+        document.getElementById('talkBtn').addEventListener('click', function() {
+            document.getElementById('emailLink').classList.remove('hidden'); // Show Gmail
+            document.getElementById('resumeLink').classList.add('hidden'); // Hide resume section
+        });
+
+
+        function toggleAnswer(questionElement) {
+    const answerElement = questionElement.nextElementSibling; // Get the corresponding answer element
+    if (answerElement.style.display === "block") {
+        answerElement.style.display = "none"; // Hide the answer if it's currently visible
+    } else {
+        answerElement.style.display = "block"; // Show the answer if it's hidden
+    }
+}
+
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+}
+
+
+    </script>
+    <script>
+        window.addEventListener('scroll', reveal);
+
+function reveal() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+    </script>
+
+
 </body>
 </html>
